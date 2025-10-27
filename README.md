@@ -10,3 +10,4 @@ root@deepseek-v2-5-0:/vllm-workspace# bash /vllm-workspace/examples/online_servi
 https://github.com/vllm-project/vllm/issues/16425
 https://discuss.vllm.ai/t/deploying-multi-node-llm-with-infiband-roce/1344/8
 research share/68f16d4c-abd8-8011-943c-39a31137e091
+https://chatgpt.com/share/68ffecd2-9e34-8011-be12-4406434bcd4a
