@@ -11,3 +11,8 @@ https://github.com/vllm-project/vllm/issues/16425
 https://discuss.vllm.ai/t/deploying-multi-node-llm-with-infiband-roce/1344/8
 research share/68f16d4c-abd8-8011-943c-39a31137e091
 https://chatgpt.com/share/68ffecd2-9e34-8011-be12-4406434bcd4a
+
+
+
+https://chatgpt.com/share/691253c9-c838-8011-9e78-fdcb3ce4a4df
+https://chatgpt.com/share/6912564a-8f20-8011-b17b-e9c8bd7f6ac4
