@@ -17,3 +17,5 @@ https://chatgpt.com/share/68ffecd2-9e34-8011-be12-4406434bcd4a
 https://chatgpt.com/share/691253c9-c838-8011-9e78-fdcb3ce4a4df
 https://chatgpt.com/share/6912564a-8f20-8011-b17b-e9c8bd7f6ac4
 <img width="219" height="219" alt="image" src="https://github.com/user-attachments/assets/c56a202d-570a-4af6-9773-6d79751ebe5c" />
+
+https://send.magicode.me/send-file/file/20b09027a6b10c94b62f92978cadecc2e33264db/view
