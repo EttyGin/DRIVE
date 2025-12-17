@@ -14,7 +14,9 @@ https://chatgpt.com/share/6912564a-8f20-8011-b17b-e9c8bd7f6ac4
 <img width="219" height="219" alt="image" src="https://github.com/user-attachments/assets/c56a202d-570a-4af6-9773-6d79751ebe5c" />
 
 
-https://chatgpt.com/c/6941b1c5-5d00-8327-b106-29e4d46e3a25
+[https://chatgpt.com/c/6941b1c5-5d00-8327-b106-29e4d46e3a25
+](https://chatgpt.com/share/69432058-35f4-8011-86fe-d8a75e262778)
+
 -------------------
     <div class="image-container" style="text-align: center; margin: 40px 0; padding: 0;">
       <img src="https://top-selfie.co.il/wp-content/uploads/2021/05/sunset-1373171.jpg" alt="Sunset"
