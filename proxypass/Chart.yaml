@@ -1,0 +1,6 @@
+apiVersion: v2
+name: nginx-litellm-proxy
+description: NGINX reverse proxy for LiteLLM with streaming support
+type: application
+version: 0.1.0
+appVersion: "1.25"
