@@ -1,0 +1,2 @@
+https://jfrog.com/help/r/artifactory-how-to-download-the-models-from-artifactory-using-huggingface-repositories/artifactory-how-to-download-the-models-from-artifactory-using-huggingface-repositories
+------- \n /n \n https://chatgpt.com/share/697153e4-1c8c-8011-8f47-0f5d6fd69da7
