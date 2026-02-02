@@ -1,0 +1,164 @@
+Create a production-ready full-stack application with:
+
+- Backend: Python + FastAPI
+- Frontend: React + TypeScript (Vite)
+- UI library: Mantine
+- Single unified URL using NGINX
+- Dockerized setup
+- Helm chart included
+- Stateless: no database, all data fetched live from LiteLLM
+- Modern, minimalist design: white + orange accent colors
+
+=====================
+BACKEND (FastAPI)
+=====================
+
+Architecture & conventions:
+- Follow clean architecture conventions:
+  - api/routers
+  - services
+  - repositories
+  - models (Pydantic schemas)
+  - core/config
+- Use Dependency Injection with FastAPI Depends
+- Clear separation between domain logic and external integrations
+
+Configuration:
+- ALL configuration must come from environment variables:
+  - LITELLM_BASE_URL
+  - LITELLM_API_KEY
+  - ADMIN_USERNAME
+  - ADMIN_PASSWORD
+  - JWT_SECRET
+- Centralized config loader using Pydantic BaseSettings
+
+Authentication:
+- Username + password authentication
+- Validate credentials against environment variables
+- JWT-based authentication
+- Token expiration support
+- Protect all endpoints except /login
+- Stateless: JWT validation only, no server-side session storage
+
+LiteLLM integration:
+- LiteLLM runs externally
+- Backend calls:
+  GET {LITELLM_BASE_URL}/key/list?page=1&size=10&return_full_object=false&include_team_keys=false&include_created_by_keys=false&sort_order=desc&expand=user
+- Header: x-litellm-api-key: {LITELLM_API_KEY}
+- Never expose LiteLLM API key to frontend
+
+Business logic:
+- Service fetches API keys from LiteLLM
+- Normalize each key into internal domain model:
+  - masked_key (e.g. sk-****abcd)
+  - owner_username (from expanded user / metadata)
+  - description (optional)
+  - created_at (ISO timestamp)
+  - allowed_models (list of model names the key can access)
+  - tags (list of tags from LiteLLM metadata)
+- Expose API endpoint:
+  GET /api/keys
+- Support:
+  - Pagination (page, size)
+  - Search by owner_username, description, tags, or model name (?search=)
+  - Sorting by any column (?sort_by= & ?sort_order=)
+- Handle:
+  - LiteLLM errors gracefully
+  - Empty or partial results
+
+=====================
+FRONTEND (React + TypeScript + Mantine)
+=====================
+
+General:
+- React + TypeScript using Vite
+- Strict typing for API responses and models
+- Communicate only with backend API
+- Single base URL
+
+Authentication UI:
+- Login page (username + password)
+- JWT stored securely (localStorage or memory)
+- Protected routes
+- Clear login error messages
+
+Keys Dashboard:
+- Fetch data from GET /api/keys
+- Display API keys in a Mantine Table or DataTable
+- Columns:
+  - Masked API key
+  - Owner user
+  - Description
+  - Creation date (formatted nicely)
+  - Allowed models (as Mantine badges/chips)
+  - Tags (as Mantine badges/chips)
+- Table features:
+  - Sort by any column (asc/desc)
+  - Search input filters by owner, description, tags, or allowed models
+  - Pagination controls
+  - Column visibility toggle (show/hide each column dynamically)
+  - Loading, error, and empty states
+- Design:
+  - Modern, minimalist, professional admin dashboard
+  - White background with orange accent colors
+  - Clean spacing, typography, responsive layout
+
+Easter Egg:
+- Subtle team logo somewhere in the UI
+- On click or hover, show a fun but professional animation or tooltip
+- Must be tasteful, minimal, and non-intrusive
+
+=====================
+DEPLOYMENT
+=====================
+
+Docker:
+- Dockerfile for backend
+- Dockerfile for frontend
+- Multi-stage builds
+- All configuration via environment variables
+
+NGINX:
+- Serve frontend static files
+- Proxy /api/* requests to FastAPI backend
+- Entire app runs under a single URL
+
+=====================
+HELM
+=====================
+
+Helm Chart:
+- charts/<app-name>/
+- values.yaml includes:
+  - Environment variables
+  - Image tags
+  - Replica count
+  - Resources
+- Templates for:
+  - Deployment
+  - Service
+  - Ingress
+- Support overriding values via values.yaml
+
+=====================
+STATLESS ARCHITECTURE
+=====================
+
+- No database required
+- All API key data comes directly from LiteLLM
+- JWT authentication is stateless
+- Frontend state (column visibility, sorting, search) can be stored in localStorage
+- Fully scalable: multiple replicas, load balancers, rolling updates
+- No sticky sessions or persistent storage required
+
+=====================
+GENERAL
+=====================
+
+- Monorepo structure:
+  - backend/
+  - frontend/
+  - nginx/
+  - charts/
+- Add comments where architectural decisions matter
+- Assume LiteLLM is already running externally
