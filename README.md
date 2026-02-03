@@ -1,4 +1,4 @@
-NCCL share/68eeae5c-7bfc-8011-b924-296b8cd47b1c
+[NCCL share/68eeae5c-7bfc-8011-b924-296b8cd47b1c
 nginx https://chatgpt.com/share/69561677-2aec-8011-b74f-6cdbd2e5b04a
 smart log/68ec3ab3-daf8-8011-8f15-838ff8631941
 
@@ -18,3 +18,4 @@ https://chatgpt.com/share/6912564a-8f20-8011-b17b-e9c8bd7f6ac4
 ](https://chatgpt.com/share/69432058-35f4-8011-86fe-d8a75e262778)
 
 
+](https://gemini.google.com/share/b6795c40e277)
