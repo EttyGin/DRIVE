@@ -12,6 +12,7 @@ gooddddddd https://chatgpt.com/share/694870e2-ba8c-8011-8eb7-c4dd7ffea90d
 https://chatgpt.com/share/691253c9-c838-8011-9e78-fdcb3ce4a4df
 https://chatgpt.com/share/6912564a-8f20-8011-b17b-e9c8bd7f6ac4
 <img width="219" height="219" alt="image" src="https://github.com/user-attachments/assets/c56a202d-570a-4af6-9773-6d79751ebe5c" />
+<img width="190" height="181" alt="image" src="https://github.com/user-attachments/assets/d7177c9b-a48c-4759-aaf1-482903db30a5" />
 
 
 [https://chatgpt.com/c/6941b1c5-5d00-8327-b106-29e4d46e3a25
@@ -19,3 +20,4 @@ https://chatgpt.com/share/6912564a-8f20-8011-b17b-e9c8bd7f6ac4
 
 
 ](https://gemini.google.com/share/b6795c40e277)
+https://gemini.google.com/share/83568434ef1c
